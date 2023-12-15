@@ -14,6 +14,7 @@ validate(){
    if [ $1 -ne 0 ] 
    then
         echo -e "$r Error:: $2 is failed $n"
+        exit 1
         
    else
         echo -e "$2......is $g success $n"
