@@ -27,7 +27,7 @@ then
 else
     echo -e "$y Logged in with root acess $n"
 fi
-cp mongo.repo /etc/yum.repos.d &>> $log_file
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $log_file
 validate "$?" "$g coping mongo.repo.."
 dnf install mongodb-org -y &>> $log_file
 validate "$?" "installing mongodb.."
