@@ -34,7 +34,7 @@ id roboshop
 if [ $? -ne 0 ]
 then
     useradd roboshop 
-    VALIDATE "$?" "roboshop user added"
+    VALIDATE $? "roboshop user added"
 else
     echo -e "$Y roboshop user already added $n"
 fi    
