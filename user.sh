@@ -52,7 +52,7 @@ VALIDATE "$?" "changing to app"
 unzip -o /tmp/user.zip &>> $LOGFILE
 VALIDATE "$?" "unzipping user.zip"
 npm install &>> $LOGFILE
-VALIDATE "$?" "installing nodejs packages"
+VALIDATE "$?" "installing dependencies"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service &>> $LOGFILE
 VALIDATE "$?" "coping user.service"
 systemctl daemon-reload &>> $LOGFILE

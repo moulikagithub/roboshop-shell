@@ -52,7 +52,7 @@ VALIDATE "$?" "changing to app"
 unzip -o /tmp/cart.zip &>> $LOGFILE
 VALIDATE "$?" "unzipping cart.zip"
 npm install &>> $LOGFILE
-VALIDATE "$?" "installing nodejs packages"
+VALIDATE "$?" "installing dependencies"
 cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service &>> $LOGFILE
 VALIDATE "$?" "coping cart.service"
 systemctl daemon-reload &>> $LOGFILE
