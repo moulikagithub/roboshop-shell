@@ -38,7 +38,7 @@ VALIDATE "$?" "installing nodejs"
 id roboshop
 if [ $? -ne 0 ]
 then
-    useradd roboshop &>> $LOGFILE
+    useradd roboshop 
     VALIDATE "$?" "roboshop user added"
 else
     echo -e "$Y roboshop user already added $n"
