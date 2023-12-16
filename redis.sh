@@ -32,7 +32,7 @@ validate "$?" "installing Redis repo"
 
  dnf module enable redis:remi-6.2 -y &>>$logfile
 
- validate "$?" "installing enable Redis" 
+ validate "$?" "enabling Redis" 
 
 dnf install redis -y &>>$logfile
 
