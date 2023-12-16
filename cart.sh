@@ -59,6 +59,6 @@ systemctl daemon-reload &>> $LOGFILE
 VALIDATE "$?" "daemon reload cart"
 systemctl enable cart &>> $LOGFILE
 VALIDATE "$?" "enabling cart" 
-systemctl start user &>> $LOGFILE
+systemctl start cart &>> $LOGFILE
 VALIDATE "$?" "starting cart"
 
