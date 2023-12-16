@@ -49,7 +49,7 @@ curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>> $
 VALIDATE "$?" "Downloading roboshop zip file"
 cd /app &>> $LOGFILE
 VALIDATE "$?" "changing to app"
-unzip /tmp/user.zip &>> $LOGFILE
+unzip -o /tmp/user.zip &>> $LOGFILE
 VALIDATE "$?" "unzipping user.zip"
 npm install &>> $LOGFILE
 VALIDATE "$?" "installing nodejs packages"
