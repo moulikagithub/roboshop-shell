@@ -40,6 +40,4 @@ dnf module disable mysql -y &>> $logfile
  systemctl start mysqld &>> $logfile
  validate $? "starting mysql"
  mysql_secure_installation --set-root-pass RoboShop@1 &>> $logfile
- validate $? "changing password"
- mysql -uroot -pRoboShop@1 &>> $logfile
- validate $? "checking if password is reset"
+ validate $? "changed  password"
