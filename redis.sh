@@ -10,7 +10,7 @@ logfile="/tmp/$0-$timestamp.log"
 echo "script started excuting at $logfile" &>>$logfile
 
 validate(){
-    if [$1 -ne 0]
+    if [ $1 -ne 0 ]
     then
         echo -e "$r Error:: $2 ....failed $n"
         exit 1
