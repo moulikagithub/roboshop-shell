@@ -63,7 +63,7 @@ VALIDATE $? "starting shipping"
 dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "installing mysql client server"
 mysql -h mysql.kalidindi.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql &>> $LOGFILE
-VALIDATE $? "loading schema" 
+VALIDATE $? "loading shipping data" 
 systemctl restart shipping &>> $LOGFILE
 VALIDATE $? "restart shipping"
 
