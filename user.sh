@@ -61,6 +61,8 @@ systemctl enable user &>> $LOGFILE
 VALIDATE "$?" "enabling user" 
 systemctl start user &>> $LOGFILE
 VALIDATE "$?" "starting user"
+cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+VALIDATE "$?" "coping mongodb repo"
 dnf install mongodb-org-shell -y &>> $LOGFILE
 VALIDATE "$?" "installing mongodb client"
 mongo --host mongodb.kalidindi.cloud </app/schema/user.js &>> $LOGFILE
