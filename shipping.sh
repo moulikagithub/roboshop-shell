@@ -42,11 +42,11 @@ else
 fi    
 mkdir -p /app &>> $LOGFILE
 VALIDATE $? "directory app created"
-curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip &>> $LOGFILE
+curl -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip &>> $LOGFILE
 VALIDATE $? "downloading roboshop zip file"
 cd /app &>> $LOGFILE
 VALIDATE $? "changing directory"
-unzip /tmp/shipping.zip &>> $LOGFILE
+unzip -o /tmp/shipping.zip &>> $LOGFILE
 VALIDATE $? "unzipping shipping.zip"
 mvn clean package &>> $LOGFILE
 VALIDATE $? "mavean package clean"
