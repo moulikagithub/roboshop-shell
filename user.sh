@@ -35,7 +35,7 @@ dnf module enable nodejs:18 -y &>> $LOGFILE
 VALIDATE "$?" "enabling nodejs" 
 dnf install nodejs -y &>> $LOGFILE
 VALIDATE "$?" "installing nodejs" 
-ID roboshop
+id roboshop
 if [ $? -ne 0 ]
 then
     useradd roboshop &>> $LOGFILE
