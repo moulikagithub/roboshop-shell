@@ -65,4 +65,4 @@ cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFI
 VALIDATE "$?" "coping mongodb repo"
 dnf install mongodb-org-shell -y &>> $LOGFILE
 VALIDATE "$?" "installing mongodb client"
-mongo --host mongodb.kalidindi.cloud </app/schema/user.js &>> $LOGFILE
+mongo --host MONGDB_HOST </app/schema/user.js &>> $LOGFILE
