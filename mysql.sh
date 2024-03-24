@@ -31,7 +31,7 @@ fi
 
 dnf module disable mysql -y &>> $logfile
 validate $? "Disabling previous mysql version"
-cp /home/centos/roboshop-shell/mysql.repo /etc/yum.repos.d/mysql.repo &>> $logfile
+cp mysql.repo /etc/yum.repos.d/mysql.repo &>> $LOGFILE
 validate $? "coping mysql repos.."
 dnf install mysql-community-server -y &>> $logfile
 validate $? "installing mysql"
